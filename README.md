@@ -1,1 +1,1 @@
-# opensea-dapp-test-automation
+# Test automation framework example for decentralized applications on Opensea Testnets
