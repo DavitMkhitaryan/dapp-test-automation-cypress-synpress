@@ -1,1 +1,1 @@
-# Test automation framework example for decentralized applications on Opensea Testnets
+# Test Automation Framework Example for Decentralized Applications 
