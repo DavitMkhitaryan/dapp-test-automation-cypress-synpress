@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@synthetixio/synpress": "^2.3.3",
+    "cypress": "^10.8.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.2.2",
+    "cypress-wait-until": "^1.7.2",
+    "typescript": "^4.8.3"
+  },
+  "scripts": {
+    "synpress:run": "synpress run --configFile cypress.config.ts",
+    "synpress:run:logics": "synpress run --configFile cypress.config.ts --spec ./cypress/e2e/logicTests.cy.ts"
+  }
+}
