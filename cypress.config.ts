@@ -18,7 +18,7 @@ export default defineConfig({
       require("cypress-mochawesome-reporter/plugin")(on);
     },
     includeShadowDom: true,
-    baseUrl: "https://dapp-react-secur.vercel.app",
+    baseUrl: "https://dapp-react-citizen.vercel.app",
     supportFile: "cypress/support/e2e.ts",
     fixturesFolder: "cypress/fixtures",
     reporter: "cypress-mochawesome-reporter",
