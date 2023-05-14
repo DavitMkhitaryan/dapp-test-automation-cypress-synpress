@@ -1,4 +1,4 @@
-# Test Automation Framework Example for Web3 Decentralized Applications 
+# Test Automation Framework Example for Web3 Decentralized Applications 🌀
 
 This is an example project to showcase a test automation project structure and architecture of a Dapp using Cypress and Synpress as a plugin. You can find more info about Synpress here: https://github.com/Synthetixio/synpress.
 
@@ -14,4 +14,4 @@ Running the tests:
 2. Run `PRIVATE_KEY=your_metamask_account_private_key npm test`
 3. Find the test run report in 'reports/index.html' file.
 
-Please, leave a star if you find it useful, thanks!
+Please, leave a star 🌟  if you find it useful, thanks!
