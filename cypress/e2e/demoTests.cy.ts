@@ -1,25 +1,31 @@
 /// <reference types="cypress"/>
 
-import { urlData } from "../fixtures/testData";
-import { Landing } from "../pages/landing";
-import { Dashboard } from "../pages/dashboard";
+import { demoTestsData } from "../fixtures/testData";
+import AddCitizenPage from "../pages/addCitizen.page";
+import Header from "../pages/header.page";
+import HomePage from "../pages/home.page";
 
-describe("Demo Tests", () => {
-    const landing = new Landing();
-    const dashboard = new Dashboard();
+describe('Demo Tests', () => {
 
-    before(() => {
-        cy.connectMetamask();
+    afterEach(() => {
+        cy.disconnectMetamaskWalletFromAllDapps();
     });
 
-    after(() => {
-        cy.origin("https://google.com", () => {
-            cy.visit("/");
+    it('Wallet connects successfully', () => {
+        HomePage.navigate();
+        Header.connectWallet();
+        Header.btnAddCitizen.should('be.visible');
+        cy.getMetamaskWalletAddress().then((address) => {
+            Header.getConnectedAddressText().should('eq', address);
         });
-        cy.disconnectMetamaskWalletFromDapp();
     });
 
-    it("Create a deposit", () => {
-        cy.visit(urlData.dashboardPage);
+    it('New citizen with valid data is added successfully', () => {
+        HomePage.navigate();
+        Header.connectWallet();
+        Header.clickAddCitizenButton();
+        AddCitizenPage.addCitizen(demoTestsData.name, demoTestsData.age, demoTestsData.city, demoTestsData.note);
+        AddCitizenPage.msgCitizenAddedSuccess.should('be.visible');
+        HomePage.navigate();
     });
 });

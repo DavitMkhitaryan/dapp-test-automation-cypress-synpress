@@ -12,13 +12,13 @@ export default defineConfig({
   pageLoadTimeout: 30000,
   requestTimeout: 30000,
   e2e: {
+    testIsolation: true,
     setupNodeEvents(on, config) {
       synpressPlugins(on, config);
       require("cypress-mochawesome-reporter/plugin")(on);
     },
-    experimentalSessionAndOrigin: true,
     includeShadowDom: true,
-    baseUrl: "https://dashboard.etherspot.io",
+    baseUrl: "https://dapp-react-secur.vercel.app",
     supportFile: "cypress/support/e2e.ts",
     fixturesFolder: "cypress/fixtures",
     reporter: "cypress-mochawesome-reporter",
