@@ -2,7 +2,7 @@
 
 This is an example project to showcase a test automation project structure and architecture of a Dapp using Cypress and Synpress as a plugin. You can find more info about Synpress here: https://github.com/Synthetixio/synpress.
 
-- System under test link: https://github.com/DavitMkhitaryan/dapp-citizen-react
+- System under test link: https://dapp-citizen-react.vercel.app/
 - Source code of the react dapp used for the test project: https://github.com/DavitMkhitaryan/dapp-citizen-react
 
 Important information about the project:
